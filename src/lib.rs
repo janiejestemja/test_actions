@@ -324,7 +324,7 @@ fn print_hex(data: &[u8]) {
 }
 
 fn print_state(state: &[[u8; 4]; 4]) {
-    todo!();
+    todo!("#1 Undescribed by author.");
 }
 
 // AES-CTR
@@ -409,7 +409,7 @@ impl AesCtrSecret {
     }
 
     pub fn encrypt<'py>(&self, py: Python<'py>, data: &PyByteArray) -> PyResult<&'py PyBytes> {
-        todo!();
+        todo!("#2 Undescribed by author.");
     }
 }
 
