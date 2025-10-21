@@ -24,3 +24,6 @@ jobs:
         uses: unyt-org/datex-tractor@local
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          model_path: /cs/ai/dpsk/dpsk/llama.cpp/models/deepseek-llm-7b-chat.Q4_K_M.gguf
+          prompt_path: /cs/ai/dpsk/dpsk/system.txt
+
