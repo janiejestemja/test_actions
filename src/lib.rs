@@ -51,23 +51,6 @@ fn inv_sbox(byte: u8) -> u8 {
     ba_sbox[byte as usize]
 }
 
-// Helperfunction
-fn print_state(state: &[[u8; 4]; 4]) {
-    for i in 0..4 {
-        for j in state[i] {
-            print!("0x{:02x}; ", j);
-        } 
-    }
-    print!("\n")
-}
-
-fn print_hex(data: &[u8]) {
-    for byte in data {
-        print!("{:02x}", byte);
-    }
-    println!()
-}
-
 // Shift rows
 fn shift_rows(state: &mut [[u8; 4]; 4]) {
     let mut temp: [u8; 4];
@@ -86,7 +69,6 @@ fn shift_rows(state: &mut [[u8; 4]; 4]) {
     for i in 0..4 {
         state[3][i] = temp[(i + 3) % 4]; 
     }
-
 }
 
 // Inverse shift rows
@@ -333,7 +315,17 @@ fn increment_counter(counter: &mut [u8; 16]) {
     }
 }
 
+// Helperfunctions
+fn print_hex(data: &[u8]) {
+    for byte in data {
+        print!("{:02x}", byte);
+    }
+    println!()
+}
 
+fn print_state(state: &[[u8; 4]; 4]) {
+    todo!();
+}
 
 // AES-CTR
 fn aes_ctr(data: &[u8], key: &[u8; 32], nonce: &[u8; 8]) -> Vec<u8> {
@@ -417,9 +409,7 @@ impl AesCtrSecret {
     }
 
     pub fn encrypt<'py>(&self, py: Python<'py>, data: &PyByteArray) -> PyResult<&'py PyBytes> {
-        let data_slice = unsafe { data.as_bytes() };
-        let result = aes_ctr(data_slice, &self.key, &self.nonce);
-        Ok(PyBytes::new(py, &result))
+        todo!();
     }
 }
 

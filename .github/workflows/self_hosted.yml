@@ -15,4 +15,4 @@ jobs:
 
     - name: Echo something...
       run: |
-        echo "Hello"
+        python $HOME/cs/wd/main.py
