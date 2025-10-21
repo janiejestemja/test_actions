@@ -73,7 +73,7 @@ fn shift_rows(state: &mut [[u8; 4]; 4]) {
 
 // Inverse shift rows
 fn inv_shift_rows(state: &mut [[u8; 4]; 4]) {
-    todo!();
+    todo!("#4 Undescribed by author.");
 }
 
 // MixColumns
