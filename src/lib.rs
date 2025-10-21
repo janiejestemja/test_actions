@@ -73,23 +73,7 @@ fn shift_rows(state: &mut [[u8; 4]; 4]) {
 
 // Inverse shift rows
 fn inv_shift_rows(state: &mut [[u8; 4]; 4]) {
-    let mut temp: [u8; 4];
-
-    temp = state[1];
-    for i in 0..4 {
-        state[1][i] = temp[(i + 4 - 1) % 4]; 
-    }
-
-    temp = state[2];
-    for i in 0..4 {
-        state[2][i] = temp[(i + 4 - 2) % 4]; 
-    }
-
-    temp = state[3];
-    for i in 0..4 {
-        state[3][i] = temp[(i + 4 - 3) % 4]; 
-    }
-
+    todo!();
 }
 
 // MixColumns
