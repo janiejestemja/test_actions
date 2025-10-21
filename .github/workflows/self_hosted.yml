@@ -15,4 +15,5 @@ jobs:
 
     - name: Echo something...
       run: |
-        python $HOME/cs/wd/main.py
+        source $HOME/cs/ai/dpsk/dpsk/.venv/bin/activate
+        python $HOME/cs/ai/dpsk/dpsk/gen_todo.py
